@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>For Zainab 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --pink: #e875a3;
+  --dark: #803d5b;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--dark);
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(145deg, #fff6fa, #ffe4ef, #f6eaff);
+  overflow-x: hidden;
+}
+
+button { font: inherit; cursor: pointer; }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: #bd5783;
+}
+
+.music {
+  border: 1px solid #f0bfd4;
+  color: #a34b72;
+  background: #ffffffc9;
+  border-radius: 30px;
+  padding: 10px 15px;
+}
+
+.hero {
+  min-height: 78vh;
+  padding: 40px 20px 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow, .section-tag {
+  letter-spacing: 2.5px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #b95c83;
+}
+
+.big-heart {
+  font-size: 85px;
+  margin: 22px 0 10px;
+  filter: drop-shadow(0 12px 15px #e77aa555);
+  animation: beat 2s infinite;
+}
+
+.script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  margin: 5px;
+  color: #bd5a86;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 8vw, 74px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+h1 span { color: #dc6799; }
+
+.description {
+  max-width: 450px;
+  line-height: 1.9;
+  color: #996780;
+  margin: 8px auto 25px;
+  font-size: 15px;
+}
+
+.btn {
+  border: none;
+  border-radius: 40px;
+  padding: 14px 24px;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(120deg, #e77ca5, #bd71c2);
+  box-shadow: 0 10px 25px #c75d9040;
+  transition: box-shadow .25s, transform .25s;
+}
+
+.btn:hover {
+  box-shadow: 0 14px 28px #c75d9050;
+}
+
+.small-note {
+  font-size: 12px;
+  color: #bd8da3;
+  margin-top: 22px;
+}
+
+.floats {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floats span {
+  position: absolute;
+  bottom: -50px;
+  animation: floatUp linear infinite;
+  opacity: 0;
+  color: #dc77a1;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .7; }
+  85% { opacity: .5; }
+  100% { transform: translateY(-115vh) rotate(40deg); opacity: 0; }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 60px 6%;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 40px);
+  margin: 15px 0 28px;
+}
+
+.poems {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.poem {
+  background: #ffffffbd;
+  border: 1px solid #f8d9e6;
+  border-radius: 23px;
+  padding: 25px 18px;
+}
+
+.poem .emoji { font-size: 34px; }
+
+.poem p {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.letter-box {
+  max-width: 710px;
+  margin: auto;
+  background: #fffafd;
+  border: 1px solid #f5d5e3;
+  border-radius: 28px;
+  padding: 38px clamp(20px, 6vw, 50px);
+  box-shadow: 0 20px 60px #a64d7412;
+}
+
+.envelope { font-size: 48px; }
+
+.letter-text {
+  text-align: left;
+  line-height: 1.95;
+  color: #815269;
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.letter-text p { white-space: pre-line; }
+
+.signature {
+  text-align: right;
+  font-family: 'Dancing Script', cursive;
+  font-size: 27px;
+  color: #d35f91;
+  margin-top: 20px;
+}
+
+.hidden { display: none !important; }
+
+.reveal { animation: reveal .8s ease both; }
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#proposal { margin-top: 30px; }
+
+.proposal-poem {
+  margin: 30px auto 45px;
+  padding: 25px 15px;
+  max-width: 530px;
+  background: linear-gradient(135deg, #fff0f6, #fffaff);
+  border: 1px solid #f4cadd;
+  border-radius: 24px;
+}
+
+.proposal-poem h2 { margin: 12px 0; }
+
+.proposal-poem p {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(21px, 4vw, 28px);
+  line-height: 1.9;
+  color: #a64c77;
+}
+
+.forever-box {
+  padding: 35px 10px;
+  border-top: 1px dashed #edbfd3;
+}
+
+.forever-heart {
+  font-size: 57px;
+  animation: beat 1.8s infinite;
+}
+
+.forever-box h2 {
+  color: #c65386;
+  line-height: 1.35;
+  margin: 15px 0;
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  min-height: 100px;
+  max-width: 500px;
+  margin: 22px auto;
+  position: relative;
+}
+
+.yes-btn {
+  background: linear-gradient(120deg, #e86b9d, #c75bb0);
+  position: relative;
+  z-index: 1;
+}
+
+.no-btn {
+  background: #fff;
+  color: #a14d73;
+  border: 1px solid #efbfd3;
+  box-shadow: 0 5px 15px #c75d9015;
+  position: relative;
+  z-index: 3;
+  transition: left .18s ease, top .18s ease;
+}
+
+.answer-message {
+  color: #bd5783;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(24px, 5vw, 32px);
+  line-height: 1.7;
+  padding: 15px 5px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 35px 15px 45px;
+  border-top: 1px solid #f3d8e4;
+  color: #a76b85;
+  font-size: 13px;
+}
+
+.footer-heart { font-size: 34px; color: #d45f91; }
+.dedication { margin: 2px 0 0; color: #c65c8a; font-family: 'Dancing Script', cursive; font-size: 17px; }
+
+.wasif {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  color: #c65c8a;
+}
+
+
+/* Added photo gallery styles */
+.photo-gallery {
+  position: relative;
+  z-index: 1;
+  padding: 55px 6%;
+  text-align: center;
+}
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  max-width: 1000px;
+  margin: 28px auto 0;
+}
+.photo-gallery-card {
+  background: #ffffffd9;
+  border: 1px solid #f8d9e6;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 8px 24px #c75d9018;
+}
+.photo-gallery-card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ffe0ed, #e9dcff);
+}
+.photo-gallery-card p {
+  padding: 12px 4px 4px;
+  color: #a76b85;
+  font-size: 14px;
+}
+.instagram-watermark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+  color: #c65c8a;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+}
+.instagram-watermark svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media(max-width: 650px) {
+  header { padding: 18px 5%; }
+  .logo { font-size: 21px; }
+  .music { font-size: 12px; padding: 9px 12px; }
+  .hero { min-height: 75vh; }
+  .poems { grid-template-columns: 1fr; }
+  .content { padding: 48px 5%; }
+  .letter-box { padding: 30px 20px; }
+  .answer-buttons { gap: 12px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="floats" id="floats" aria-hidden="true"></div>
+
+<header>
+  <div class="logo">♡ little love letter ♡</div>
+  <button class="music" id="musicBtn" type="button" aria-expanded="false">♫ Play Jag Ghoomeya</button>
+  <!-- Add your own audio file named music.mp3 in the same folder as this index.html -->
+  <audio id="birthdayAudio" preload="none">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="eyebrow">✨ A LITTLE SURPRISE FOR YOU ✨</div>
+    <div class="big-heart">💗</div>
+    <p class="script">To my favourite person</p>
+    <h1>Happy Birthday,<br><span>Zainab!</span></h1>
+    <p class="description">
+      A tiny world filled with love, made especially for you. 🌷
+    </p>
+    <button class="btn" id="surpriseBtn" type="button">
+      Open your surprise ♡
+    </button>
+    <p class="small-note">Made with love by Wasif 💌</p>
+  </section>
+
+
+  <!-- Added photo gallery: change filenames in src attributes only -->
+  <section class="photo-gallery" id="photo-gallery">
+    <div class="section-tag">OUR LITTLE MEMORIES</div>
+    <h2>Sweet Memories 📸</h2>
+    <p class="description">A few favourite moments, saved with love. 💗</p>
+
+    <div class="photo-gallery-grid">
+      <div class="photo-gallery-card">
+        <img src="photo1.jpg" alt="Memory 1">
+        <p>Our little memory ♡</p>
+      </div>
+    <div class="photo-gallery-grid">
+      <div class="photo-gallery-card">
+        <img src="photo7.jpg" alt="Memory 1">
+        <p> My Wifey♡</p>
+      </div>
+      <div class="photo-gallery-card">
+        <img src="photo2.jpg" alt="Memory 2">
+        <p>A special moment 🌷</p>
+      </div>
+      <div class="photo-gallery-card">
+        <img src="photo3.jpg" alt="Memory 3">
+        <p>One to remember 💗</p>
+      </div>
+      <div class="photo-gallery-card">
+        <img src="photo4.jpg" alt="Memory 4">
+        <p> My Princess. ✨</p>
+      </div>
+      <div class="photo-gallery-card">
+        <img src="photo5.jpg" alt="Memory 5">
+        <p>A little happiness 🌸</p>
+      </div>
+      <div class="photo-gallery-card">
+        <img src="photo6.jpg" alt="Memory 6">
+        <p>Always special ♡</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="section-tag">A FEW WORDS FROM MY HEART</div>
+    <h2>For you, my Zainab 🌸</h2>
+
+    <div class="poems">
+      <article class="poem">
+        <div class="emoji">🌷</div>
+        <p>Tum meri zindagi ka woh haseen ehsaas ho, jo har pal mere dil ke paas ho. ❤️</p>
+      </article>
+
+      <article class="poem">
+        <div class="emoji">💖</div>
+        <p>Lafzon mein kaise bayaan karun tumhe, tum meri har dua ka khoobsurat jawaab ho. 🥹</p>
+      </article>
+
+      <article class="poem">
+        <div class="emoji">🌙</div>
+        <p>Agar meri zindagi ek kitaab hai, toh tum uska sabse pyaara panna ho. 💌</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="content" id="love-letter">
+    <div class="letter-box">
+      <div class="envelope">💌</div>
+      <div class="section-tag">A MESSAGE FROM MY HEART</div>
+      <h2>A little letter from Wasif</h2>
+
+      <p id="teaser" class="description">
+        There are a few things I want you to know, from the bottom of my heart...
+      </p>
+
+      <button class="btn" id="letterBtn" type="button">
+        Open my letter 💗
+      </button>
+
+      <div id="letter" class="letter-text hidden">
+        <p>Meri pyaari Zainab ❤️🥹
+# Happy Birthday, My Wife Zainab 👰🌹💗
+
+😊 17 October mere liye bas ek date nahi hai. Ye woh din hai jis din ☝🏻 Allah ne ek bahut khoobsurat 🌸 ladki ko is duniya mein bheja. 👰
+
+🫵🏻 Tum meri zindagi mein kab aayi, ye shayad ek coincidence tha, lekin tum meri zindagi ka itna khoobsurat hissa aur aadat ban jaogi, ye maine kabhi socha tak nahi tha. 😌💖🫂
+
+**Zainab ❤️**
+
+Pata hai, main tumhe birthday par sirf “Happy Birthday” kehkar baat khatam nahi karna chahta, kyunki tum mere liye koi aam ladki nahi ho. Tum meri pasandida ladki ho aur mere liye bahut qeemti ho, ek diamond ki tarah. 💎
+
+Aur apni pasandida, special ladki ke liye kuch special toh hona hi chahiye. 🤗💋
+
+Main nahi jaanta ki meri zindagi mein tumhara aana kismat thi ya ek khoobsurat ittefaq, lekin itna zaroor jaanta hoon ki tumhare aane ke baad meri zindagi bahut khoobsurat ban gayi hai. 😌✨
+
+Tumne shayad kabhi socha bhi nahi hoga ki tum mere liye kitni special ho. 🥹 Tumhari presence hi mere liye bahut kuch hai. 😌👰
+
+Tum saath ho toh sab theek lagta hai.
+
+**Aur Zainab ❤️🫂**
+
+Main nahi jaanta ki aane wale waqt mein zindagi humein kahan lekar jaayegi, lekin meri dua hai ki tumhari zindagi mein hamesha khushiyan rahein. 🥺🤲❤️
+
+☺️ Tumhare chehre par hamesha muskurahat rahe, 🩷 tumhare dil ko kabhi kisi baat ka dukh na ho ❤️‍🩹 aur tumhare saare jaayaz khwaab poore hon. ✨
+
+Ek baat hamesha yaad rakhna: mere liye tum aaj bhi utni hi special ho jitni pehle din thi, aur hamesha rahogi, In Sha Allah. 🫂🥹❤️
+
+Tumse baat karna, 🤗 tumhari chhoti-chhoti baatein sunna 😘 aur tumhe khush hota dekhkar khud khush ho jaana 🥰 — ye sab meri zindagi ke woh khoobsurat hisse hain jinhe main kabhi khona nahi chahta. 🫂
+
+Tum meri zindagi ka sirf ek hissa nahi ho, Zainab. Tum woh ehsaas ho jiske hone se zindagi aur bhi khoobsurat lagne lagti hai. 🤗🌹
+
+Tum jab kehti ho na, **“Main hoon na tumhare saath,”** tab bas tumhara itna kehna mere saare dukh ko khaak mein badal deta hai.
+
+Love you, Zainab! 🫂🌹🥰
+
+Allah tumhe hamesha apni hifz-o-amaan mein rakhe, tumhari har pareshani aasaan kare aur tumhari zindagi ko bepanah khushiyon se bhar de. Aameen. 🤲✨
+
+Aur haan, aaj ka din sirf tumhara birthday nahi hai, balki us khoobsurat din ka jashn hai jis din tum is duniya mein aayi thi aur kisi ki zindagi mein itni khaas ban gayi. ❤️🌍
+
+**Happy Birthday, My Wife Zainab! Ummmmah!** 💋🎂❤️
+
+Hamesha khush rehna, hamesha muskurati rehna, kyunki tumhari muskurahat mere liye bahut maayne rakhti hai. 🥹🌹
+
+---
+
+## 🌹 Ek chhota sa shukriya Zainab ki Ammi ke liye ❤️
+
+Aur ek chhota sa shukriya Zainab ki Ammi ke liye. ❤️🌹
+
+Jinhone is duniya ko phool si khoobsurat 🌹 aur pyaari 👼🏻 beti di, aur mujhe meri zindagi ka itna pyaara insaan mila. 🥹❤️
+
+Ammi, aapne shayad ek beti ko janm diya tha, lekin aapki us beti ne kisi ki zindagi ko aur bhi khoobsurat bana diya. ❤️✨
+
+Allah aapko hamesha khush rakhe, sehat de aur aapka saaya Zainab ke sar par hamesha salamat rakhe. Aameen. 🤲❤️
+
+Thank you so much, meri pyaari saasu maa, itne khoobsurat dil wali beti ko is duniya mein laane ke liye. 🥹🌹
+
+Aapki beti mere liye bahut special hai, aur uski muskurahat hamesha salamat rahe, In Sha Allah. ❤️🤲
+
+---
+
+**Zainab, meri 👼🏻 bachi, meri 🤗 jaan, mera 😌 sukoon, meri laadli gudiya 💋, mera jigar!** 🫂🌹
+
+**My wife! ❤️👰😘**
+
+I love you so much. Main aapse bepanah mohabbat karta hoon. ❤️🥹🌹</p>
+        <div class="signature">With lots of love,<br>Tumhara Wasif ♡</div>
+      </div>
+
+      <!-- Shayari and forever question -->
+      <div id="proposal" class="hidden">
+        <div class="proposal-poem">
+          <div class="envelope">🌷</div>
+          <h2>Ek baat dil se... 💗</h2>
+          <p>
+            Teri hasi meri khushi ban jaaye,<br>
+            Teri har dua meri dua ban jaaye. ❤️<br>
+            Har janam mein bas itni si khwahish hai,<br>
+            Tera saath meri zindagi ban jaaye. 🫶🏻
+          </p>
+          <div class="signature">Sirf tumhare liye, Wasif 💌</div>
+        </div>
+
+        <div class="forever-box">
+          <div class="forever-heart">💖</div>
+          <div class="section-tag">ONE LITTLE QUESTION</div>
+          <h2>Will you be mine forever?</h2>
+          <p class="description">
+            You make my world a little more beautiful. 🌸
+          </p>
+
+          <div class="answer-buttons" id="answerArea">
+            <button class="btn yes-btn" id="yesBtn" type="button">
+              YES! 💖
+            </button>
+            <button class="btn no-btn" id="noBtn" type="button">
+              NO 🙈
+            </button>
+          </div>
+
+          <p id="answerMessage" class="answer-message hidden"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-heart">♡</div>
+  <p class="dedication">Especially created for Zainab ♡</p>
+
+  <a class="instagram-watermark"
+     href="https://www.instagram.com/vxn_ek4ns__/"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Instagram profile vxn_ek4ns__">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"></circle>
+    </svg>
+    created by @vxn_ek4ns__
+  </a>
+</footer>
+
+<script>
+// Floating hearts
+const floatContainer = document.getElementById("floats");
+
+for (let i = 0; i < 24; i++) {
+  const heart = document.createElement("span");
+  heart.textContent = ["♡", "♥", "✧", "💕"][i % 4];
+  heart.style.left = ((i * 37 + 7) % 100) + "%";
+  heart.style.animationDelay = -(i % 10) * 1.5 + "s";
+  heart.style.animationDuration = (8 + i % 6) + "s";
+  heart.style.fontSize = (16 + i % 4 * 7) + "px";
+  floatContainer.appendChild(heart);
+}
+
+// Open the welcome surprise
+document.getElementById("surpriseBtn").addEventListener("click", () => {
+  document.getElementById("home").innerHTML = `
+    <div class="eyebrow">✨ TODAY IS ALL ABOUT YOU ✨</div>
+    <div class="big-heart">💖</div>
+    <p class="script">A little message for you</p>
+    <h1>You are so<br><span>special, Zainab!</span></h1>
+    <p class="description">
+      If I could gift you one thing, it would be the ability
+      to see yourself through my eyes. You would know how
+      wonderful you are. 💗
+    </p>
+    <button class="btn" id="openLetterHero" type="button">
+      Read my secret letter 💌
+    </button>
+    <p class="small-note">Always wishing you happiness — Wasif ♡</p>
+  `;
+
+  document.getElementById("openLetterHero").addEventListener("click", () => {
+    revealLetter();
+    document.getElementById("love-letter").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+});
+
+// Reveal letter, shayari and proposal
+function revealLetter() {
+  document.getElementById("letter").classList.remove("hidden");
+  document.getElementById("letter").classList.add("reveal");
+  document.getElementById("teaser").classList.add("hidden");
+  document.getElementById("letterBtn").classList.add("hidden");
+
+  const proposal = document.getElementById("proposal");
+  proposal.classList.remove("hidden");
+  proposal.classList.add("reveal");
+}
+
+document.getElementById("letterBtn").addEventListener("click", revealLetter);
+
+// Audio-only music: place your own MP3 file named music.mp3 beside this HTML file.
+const musicButton = document.getElementById("musicBtn");
+const birthdayAudio = document.getElementById("birthdayAudio");
+
+musicButton.addEventListener("click", async () => {
+  if (birthdayAudio.paused) {
+    try {
+      await birthdayAudio.play();
+      musicButton.textContent = "♫ Stop music";
+      musicButton.setAttribute("aria-expanded", "true");
+    } catch (error) {
+      alert("Music file nahi mila ya play nahi hua. Apni audio file ko music.mp3 naam dekar index.html ke same folder mein rakho.");
+    }
+  } else {
+    birthdayAudio.pause();
+    musicButton.textContent = "♫ Play music";
+    musicButton.setAttribute("aria-expanded", "false");
+  }
+});
+
+birthdayAudio.addEventListener("ended", () => {
+  musicButton.textContent = "♫ Play music";
+  musicButton.setAttribute("aria-expanded", "false");
+});
+
+// NO button moves away playfully when approached or tapped.
+const noBtn = document.getElementById("noBtn");
+const answerArea = document.getElementById("answerArea");
+let noMoves = 0;
+
+function moveNoButton(event) {
+  if (event) event.preventDefault();
+
+  const area = answerArea.getBoundingClientRect();
+  const btn = noBtn.getBoundingClientRect();
+
+  // After the first move, position the button inside its container.
+  if (noBtn.style.position !== "absolute") {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.max(0, btn.left - area.left) + "px";
+    noBtn.style.top = Math.max(0, btn.top - area.top) + "px";
+  }
+
+  const maxX = Math.max(0, area.width - btn.width);
+  const maxY = Math.max(0, area.height - btn.height);
+
+  noBtn.style.left = Math.random() * maxX + "px";
+  noBtn.style.top = Math.random() * maxY + "px";
+  noMoves++;
+}
+
+noBtn.addEventListener("pointerenter", moveNoButton);
+noBtn.addEventListener("pointerdown", moveNoButton);
+noBtn.addEventListener("click", moveNoButton);
+
+// YES button response
+document.getElementById("yesBtn").addEventListener("click", () => {
+  const message = document.getElementById("answerMessage");
+
+  message.textContent =
+    "Awww! 💖🥹 Sending you the biggest virtual hug! " +
+    "May your birthday be filled with love and happiness. 🌷";
+
+  message.classList.remove("hidden");
+  message.classList.add("reveal");
+});
+</script>
+
+</body>
+</html>
